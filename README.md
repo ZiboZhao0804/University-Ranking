@@ -1,10 +1,9 @@
 # 2022 Best Colleges in America
 
 ## Data Source:
-[![niche](Images/NicheLogo.png)](https://www.niche.com/) <br>
-[![Geocoding](Images/GeocodingAPI.png)](https://https://developers.google.com/maps/documentation/geocoding/overview) <br>
+[![niche](Images/NicheLogo.png)](https://www.niche.com/) [![Geocoding](Images/GeocodingAPI.png)](https://https://developers.google.com/maps/documentation/geocoding/overview)
 
 ## Extraction and Transformation:
-(Niche_Scraping)
-(Loccation_Info)
-(Data)
+Web Scraping: [Niche_Scraping]
+Geocoding API for location: [Loccation_Info]
+Final data file: [Data]
