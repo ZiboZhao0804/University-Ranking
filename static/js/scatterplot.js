@@ -1,33 +1,26 @@
 
+ // function to narrow down to top 50 schools.
+ function filterUniversity(school) {
+    return school.rating < 51;}
 
-
-  d3.json("/data").then((data) => {
-
-
-    var acceptance = data.map(d => d[acceptance_rate (%)]);
-    var tuitaion= data.map(d => d[acceptance_rate (%)]);
-
-  function filterUniversity(school) {
-    return school.rating < 51;
-  }
-  
-  // 2. Use filter() to pass the function as its argument
+ d3.json("/data").then((data) => {
+ //  Use filter() to pass the function as its argument
   var filteredUniversity = data.filter(filterUniversity);
   
   //  Check to make sure your are filtering your movies.
   console.log(filteredUniversity);
   
   // 3. Use the map method with the arrow function to return all the filtered movie titles.
-  var acceptance = data.map(d => d[acceptance_rate (%)]);
+  var acceptance = data.map(d => d["acceptance_rate (%)"]);
     
   
-  //  Check your filtered movie titles
+  //  Check your filtered school acceptance
   console.log(acceptance);
   
   // 4. Use the map method with the arrow function to return all the filtered movie metascores.
-  var tuition= data.map(d => d[acceptance_rate (%)]);
+  var tuition= data.map(d => d["net_price ($)"]);
   
-  //  Check your filtered metascores.
+  //  Check your filtered net cost.
   console.log(tuition);
   
   // 5. Create your trace.
@@ -49,3 +42,4 @@
   
   // 8. Plot the chart to a div tag with id "scatter plot "
   Plotly.newPlot("Scatterplot", data,layout)
+})
