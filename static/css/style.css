@@ -15,6 +15,7 @@ body {
   position: relative;
   min-height: 100%;
   padding-bottom: 130px;
+  margin-bottom: 100px;
   overflow: auto;
 }
 
@@ -91,10 +92,22 @@ select {
   margin-top: 50px;
 }
 
+.navbar-brand {
+  text-align: center;
+}
+
+.nav-link{
+  text-align: right;
+}
+
+.nav-item dropdown {
+  text-align: right;
+}
+
 /* The styles for the parallax */
 .hero {
   position: relative;
-  height: 550px;
+  height: 250px;
   padding: 20px;
   margin: 0;
   background:#E9ECEF;
@@ -105,14 +118,14 @@ select {
 }
 
 .hero h1 {
-  margin-top: 200px;
+  margin-top: 50px;
   font-size: 0.1rem;
   color: black;
   animation: title 1.2s forwards linear;
 }
 
 .hero p {
-  font-size: 2rem;
+  font-size: 0.1rem;
   color: black;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
@@ -199,7 +212,7 @@ select {
   }
 
   to {
-    font-size: 7.5rem;
+    font-size: 2.5rem;
     opacity: 1;
   }
 }
@@ -210,7 +223,7 @@ select {
   }
 
   to {
-    font-size: 5.5rem;
+    font-size: 1.5rem;
     opacity: 1;
   }
 }
@@ -222,12 +235,15 @@ select {
 
   to {
     opacity: 1;
+    font-size: 1.5rem;
   }
 }
 
 
 
-
+/* .row{
+  --bs-gutter-x: opx;
+} */
 
 
 #map {
