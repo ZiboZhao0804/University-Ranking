@@ -11,31 +11,73 @@
 //   }).addTo(myMap);
 
 var myMap = L.map("map", {
-  center: [41.58, -103.46],
+  center: [41.58, -88],
   zoom: 4
 });
   
-  // Adding a tile layer (the background map image) to our map
-  // We use the addTo method to add objects to our map
-  L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-    tileSize: 512,
-    maxZoom: 18,
-    zoomOffset: -1,
-    //more choices @: https://docs.mapbox.com/api/maps/styles/
-    id: "mapbox/streets-v11",
-    accessToken: API_KEY
-  }).addTo(myMap);
+// Adding a tile layer (the background map image) to our map
+// We use the addTo method to add objects to our map
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+  attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+  tileSize: 512,
+  maxZoom: 18,
+  zoomOffset: -1,
+  //more choices @: https://docs.mapbox.com/api/maps/styles/
+  id: "mapbox/streets-v11",
+  accessToken: API_KEY
+}).addTo(myMap);
+
+// L.marker([41.58, -88]).addTo(myMap)
+//     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+//     .openPopup();
+
+d3.json("/data").then(
+  function(data) {
+    renderData(data);
+  }
+);
+
+function renderData(data) {
+
+  // mitData = data[0];
+  //   L.marker([mitData.state_lat, mitData.state_lng]).addTo(myMap)
+  //     .bindPopup(mitData.name)
+  //     .openPopup();
+
+  for (var i = 200; i < 220; i++) {
+    var schoolData = data[i];
+    var SATavg = schoolData.SAT_average;
+
+    console.log(schoolData.college_lat, schoolData.college_lng);
+    
+    L.circleMarker([schoolData.college_lat, schoolData.college_lng],{
+          fillOpacity:0.75,
+          color:getColor(SATavg),
+          fillColor: getColor(SATavg)
+        }).addTo(myMap)
+        // .bindPopup(schoolData.name)
+        //  .openPopup();
+
+    // L.circleMarker(
+    //   [schoolData.college_lat, schoolData.college_lng],
+    //   {
+    //     fillOpacity:0.75,
+    //     color:getColor(SATavg),
+    //     fillColor: getColor(SATavg)
+    //   }).addTo(myMap);
+    // }
+  }
+}
 
 //   //set color degree to the map for later on SAT scores
-//  function getColor(d) {
-//    return d > 800  ? '#E31A1C' :
-//           d > 1100  ? '#FC4E2A' :
-//           d > 1400  ? '#FD8D3C' :
-//           d > 1500  ? '#FEB24C' :
-//           d > 1550   ? '#FED976' :
-//                       '#FFEDA0';
-//  }
+ function getColor(d) {
+   return d > 800  ? '#E31A1C' :
+          d > 1400  ? '#FC4E2A' :
+          d > 1500  ? '#FD8D3C' :
+          d > 1520  ? '#FEB24C' :
+          d > 1550   ? '#FED976' :
+                      '#FFEDA0';
+ }
 // // // Add a legend for the color levels
 //  var legend = L.control({position: 'bottomright'});
 

@@ -23,7 +23,7 @@ function buildMetadata(college_name){
 
       //dropdown menu
       // use the data.names as test_id to build the dropdown menu
-      // assign text and value to be the id
+      // assign text and value to be the idselDataset
       var id = data.map(d => d.name);
 
       var select = d3.select("select");
