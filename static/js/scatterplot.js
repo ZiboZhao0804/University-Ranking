@@ -27,6 +27,7 @@
   var trace = {
     x: acceptance,
     y: tuition,
+    mode: 'markers',
     type: "scatter"
   };
   

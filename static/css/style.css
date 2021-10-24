@@ -224,3 +224,14 @@ select {
     opacity: 1;
   }
 }
+
+
+
+
+
+
+#map {
+  margin: 1em auto;
+  height:70%;
+  border: 2px dashed black;
+}  
