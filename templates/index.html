@@ -123,41 +123,76 @@
           </div>
         </div>  
           <!--map-->
+          <br>
           <div class="row">
-            <div class="card card-body border-info bg-light">
-              <h5>A visualization of best college on US map</h5>
-              <div class="card-header">
-                <div>
-                  <h6 class="card-title text-center border-bottom"></h6>
-                  <p class="card-text">descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.</p>
+            <div class="col-md-12">
+              <div class="card card-body border-info bg-light">
+                <h5>A visualization of best college on US map</h5>
+                <div class="card-header">
+                  <div>
+                    <h6 class="card-title text-center border-bottom"></h6>
+                    <p class="card-text">descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.</p>
+                  </div>
                 </div>
-              </div><!-- card-header -->
-              <div class="card-body">
-                <div id="map" class="leaflet-container" style="height: 650px; outline:none"></div>
-              </div>
+                <div class="card-body">
+                  <div id="map" class="leaflet-container" style="height: 650px; outline:none"></div>
+                </div>
+              </div>  
             </div>
           </div>
       
 
         <!--still in progress-->
+         <!--more plots coming down -->
+         <br> 
+         <div class="row">
+          <div class="col-md-6">
+            <div class="card card-body border-info bg-light">
+              <h5>Top 10 states with the most number of top 800 colleges</h5>
+              <div class="card-header">
+                <div>
+                  <h6 class="card-title text-center border-bottom"></h6>
+                  <p class="card-text">discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="pieplot" style="height: 300px; outline:none"></div>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-6">
+            <div class="card card-body border-info bg-light">
+              <h5>SAT score distribution in different Niche grade categories</h5>
+              <div class="card-header">
+                <div>
+                  <h6 class="card-title text-center border-bottom"></h6>
+                  <p class="card-text">discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="boxplot" style="height: 300px; outline:none"></div>
+              </div>
+            </div>  
+          </div>
+        </div>
         <!--scatter plot, need more information or even change to a d3 scatter-->
-        <div class="row">
-          <div class="col-md-6">
-            <div id="Scatterplot"></div>
-          </div>
-          <div class="col-md-6">
-            <div id="Barplot"></div>
-          </div>
+        <br>   
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-body border-info bg-light">
+            <h5>SAT score distribution in different Niche grade categories</h5>
+            <div class="card-header">
+              <div>
+                <h6 class="card-title text-center border-bottom"></h6>
+                <p class="card-text">discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.discrition of plot.</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="scatterplot" style="height: 300px; outline:none"></div>
+            </div>
+          </div>  
         </div>
-        <!--more plots coming down -->
-        <div class="row">
-          <div class="col-md-6">
-            <div id="anotherplot"></div>
-          </div>
-          <div class="col-md-6">
-            <div id="anotheranotherplot"></div>
-          </div>
-        </div>
+      </div>
     </div>
 
     <footer class="footer">
@@ -179,11 +214,11 @@
     <script type="text/javascript" src="static/js/Unimap.js"></script>
     <script type="text/javascript" src="static/js/choropleth.js"></script>
 
-    <!-- Our JavaScript for scatterplot -->
+    <!-- Our JavaScript for different plot -->
+
+    <script type="text/javascript" src="static/js/pieplot.js"></script>
+    <script type="text/javascript" src="static/js/boxplot.js"></script>
     <script type="text/javascript" src="static/js/scatterplot.js"></script>
-    <script type="text/javascript" src="static/js/Barplot.js"></script>
-    <script type="text/javascript" src="static/js/anotherplot.js"></script>
-    <script type="text/javascript" src="static/js/anotheranotherplot.js"></script>
 
   </div>
 </body>
