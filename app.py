@@ -12,12 +12,15 @@ client = pymongo.MongoClient(conn)
 # Connect to mongo db and collection
 db = client.collegeDB
 colleges = db.colleges
+states = db.states
 
 # Finds all the items in the db and sets it to a variable
 college_list = list(colleges.find())
 college_df = pd.DataFrame(college_list).iloc[:,1:]
 collegeData = college_df.to_json(orient="records")
 collegeData = json.loads(collegeData)
+
+stateNumData = json.loads(pd.DataFrame(list(states.find())).iloc[:,1:].to_json(orient="records"))
 
 # landing page
 @app.route('/')
@@ -30,6 +33,11 @@ def index():
 @app.route('/data')
 def data():
     return jsonify(collegeData)
+
+
+@app.route('/state')
+def state():
+    return jsonify(stateNumData)
 
 # data page to perform searching by user
 @app.route('/datapage')
