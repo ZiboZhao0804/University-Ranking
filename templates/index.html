@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 
 <body>
@@ -122,20 +123,20 @@
           </div>
         </div>  
           <!--map-->
-        <div class="row">
-          <div class="card card-body border-info bg-light">
-            <h5>A visualization of best college on US map</h5>
-            <div class="card-header">
-              <div>
-                <h6 class="card-title text-center border-bottom"></h6>
-                <p class="card-text">descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.</p>
+          <div class="row">
+            <div class="card card-body border-info bg-light">
+              <h5>A visualization of best college on US map</h5>
+              <div class="card-header">
+                <div>
+                  <h6 class="card-title text-center border-bottom"></h6>
+                  <p class="card-text">descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.descrption of map.</p>
+                </div>
+              </div><!-- card-header -->
+              <div class="card-body">
+                <div id="map" class="leaflet-container" style="height: 650px; outline:none"></div>
               </div>
-            </div><!-- card-header -->
-            <div class="card-body">
-              <div id="map" class="leaflet-container" style="height: 600px; outline:none"></div>
             </div>
           </div>
-        </div>
       
 
         <!--still in progress-->
@@ -173,7 +174,11 @@
     <!-- API key -->
     <script type="text/javascript" src="static/js/config.js"></script>
     <!-- Our JavaScript for map -->
+    <!--statesData copied from https://leafletjs.com/examples/choropleth/us-states.js-->
+    <script type="text/javascript" src="static/js/statesData.js"></script>
     <script type="text/javascript" src="static/js/Unimap.js"></script>
+    <script type="text/javascript" src="static/js/choropleth.js"></script>
+
     <!-- Our JavaScript for scatterplot -->
     <script type="text/javascript" src="static/js/scatterplot.js"></script>
     <script type="text/javascript" src="static/js/Barplot.js"></script>
