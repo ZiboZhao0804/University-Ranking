@@ -42,5 +42,5 @@
   };
   
   // 8. Plot the chart to a div tag with id "scatter plot "
-  Plotly.newPlot("Scatterplot", data,layout)
+  Plotly.newPlot("scatterplot", data,layout)
 })
