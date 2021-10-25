@@ -17,3 +17,4 @@ def mongoimport(csv_path, db_name, coll_name, db_url='localhost', db_port=27017)
     return coll.count()
 
 mongoimport('Data/data.csv','collegeDB','colleges')
+mongoimport('Data/states.csv','collegeDB','states')
