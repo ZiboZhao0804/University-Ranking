@@ -1,23 +1,17 @@
 
-
-// //add a maplayer to the object
-// L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-//     attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-//     maxZoom: 18,
-//     tileSize: 512,
-//     zoomOffset: -1,
-//     id: "mapbox/streets-v11",
-//     accessToken: API_KEY
-//   }).addTo(myMap);
-
-var myMap = L.map("map", {
-  center: [41.58, -88],
-  zoom: 4
-});
-  
 // Adding a tile layer (the background map image) to our map
 // We use the addTo method to add objects to our map
-L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+var light = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+  attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+  tileSize: 512,
+  maxZoom: 18,
+  zoomOffset: -1,
+  //more choices @: https://docs.mapbox.com/api/maps/styles/
+  id: "mapbox/light-v9",
+  accessToken: API_KEY
+});
+
+var street = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
   tileSize: 512,
   maxZoom: 18,
@@ -25,102 +19,121 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   //more choices @: https://docs.mapbox.com/api/maps/styles/
   id: "mapbox/streets-v11",
   accessToken: API_KEY
-}).addTo(myMap);
+});
 
-// L.marker([41.58, -88]).addTo(myMap)
-//     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-//     .openPopup();
 
-d3.json("/data").then(
-  function(data) {
-    renderData(data);
-  }
-);
-
-function renderData(data) {
-
-  // mitData = data[0];
-  //   L.marker([mitData.state_lat, mitData.state_lng]).addTo(myMap)
-  //     .bindPopup(mitData.name)
-  //     .openPopup();
-
-  for (var i = 200; i < 220; i++) {
-    var schoolData = data[i];
-    var SATavg = schoolData.SAT_average;
-
-    console.log(schoolData.college_lat, schoolData.college_lng);
-    
-    L.circleMarker([schoolData.college_lat, schoolData.college_lng],{
-          fillOpacity:0.75,
-          color:getColor(SATavg),
-          fillColor: getColor(SATavg)
-        }).addTo(myMap)
-        // .bindPopup(schoolData.name)
-        //  .openPopup();
-
-    // L.circleMarker(
-    //   [schoolData.college_lat, schoolData.college_lng],
-    //   {
-    //     fillOpacity:0.75,
-    //     color:getColor(SATavg),
-    //     fillColor: getColor(SATavg)
-    //   }).addTo(myMap);
-    // }
-  }
+function getColor(d) {
+  return d > 60 ? '#800026' :
+         d > 50  ? '#BD0026' :
+         d > 40  ? '#E31A1C' :
+         d > 30  ? '#FC4E2A' :
+         d > 20   ? '#FD8D3C' :
+         d > 10   ? '#FEB24C' :
+         d > 5   ? '#FED976' :
+                    '#FFEDA0';
 }
 
-//   //set color degree to the map for later on SAT scores
- function getColor(d) {
-   return d > 800  ? '#E31A1C' :
-          d > 1400  ? '#FC4E2A' :
-          d > 1500  ? '#FD8D3C' :
-          d > 1520  ? '#FEB24C' :
-          d > 1550   ? '#FED976' :
-                      '#FFEDA0';
- }
-// // // Add a legend for the color levels
-//  var legend = L.control({position: 'bottomright'});
+d3.json('/data').then(function(data){
+  //collegeLayer with data
+  var collegeData = [];
+  var collegeMarkers = [];
+  data.forEach(
+    function(college){
+      var c = {};
+      c.name = college.name;
+      c.rating = college.rating;
+      c.SAT_range = college.SAT_range;
+      c.tuition = college.tuition;
+      c.acceptance_rate = college['acceptance_rate (%)'];
+      c.niche_grade = college.niche_grade;
+      c.location = [college.college_lat,college.college_lng];
+      collegeData.push(c);
+    }
+  );
+  collegeData.forEach(
+    function(c){
+      collegeMarkers.push(L.marker(c.location).bindPopup("<h3><strong>" + c.name + "</strong></h3>" + "<hr><h4>Rating: "+ c.rating +"</h4>"
+      + "<hr><h4>SAT range: "+ c.SAT_range +"</h4>"
+      + "<hr><h4>Niche grade: "+ c.niche_grade +"</h4>"
+      + "<hr><h4>tuition: "+ c.tuition +"</h4>"
+      + "<hr><h4>acceptance rate: "+ c.acceptance_rate +"%</h4>"
+      ))     
+    }
+  );
+  var collegeLayer = L.layerGroup(collegeMarkers);
 
-//  legend.onAdd = function () {
+  //stateLayer with number of top 800 colleges per states
+  function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.collegeNumber),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+  }
+  function onEachFeature(feature, layer) {
+    // Set mouse events to change map styling
+    layer.on({
+      // When a user's mouse touches a map feature, the mouseover event calls this function, that feature's opacity changes to 90% so that it stands out
+      mouseover: function(event) {
+        layer = event.target;
+        layer.setStyle({
+          weight: 5,
+          color: '#666',
+          dashArray: '',
+          fillOpacity: 0.9
+        });
+      },
+      // When the cursor no longer hovers over a map feature - when the mouseout event occurs - the feature's opacity reverts back to 50%
+      mouseout: function(event) {
+        layer = event.target;
+        layer.setStyle(style(feature));
+      },
+      // When a feature (neighborhood) is clicked, it is enlarged to fit the screen
+      click: function(event) {
+        myMap.fitBounds(event.target.getBounds());
+      }
+    });
+    // Giving each feature a pop-up with information pertinent to it
+    layer.bindPopup("<h1>" + "State: " + feature.properties.name + "</h1> <hr> <h2>" + "Number of top 800 collges in the state: " + feature.properties.collegeNumber + "</h2>");
+  }
+  var stateLayer = L.geoJson(statesData, {style: style, onEachFeature: onEachFeature});
 
-// var div = L.DomUtil.create('div', 'info legend'),
-//  grades =[700,800,1100,1400,1500,1550] ;
 
+  var baseMaps = {
+    Light: light,
+    Street: street
+  };
 
-// //   //loop through our density intervals and generate a label with a colored square for each interval
-// for (var i = 0; i < grades.length; i++) {
-//       div.innerHTML +=
-//           '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-//           grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-//   }
+  var overlayMaps = {
+    Colleges: collegeLayer,
+    States: stateLayer
+  };
 
-// return div;
-// };
+  var myMap = L.map("map", {
+    center: [38.58, -98.46],
+    zoom: 5,
+    layers: [light, stateLayer]
+  });
 
-// legend.addTo(myMap); 
+  L.control.layers(baseMaps,overlayMaps,{collapsed: false}).addTo(myMap);
 
-// // Perform a GET request data from the stored URL :
-// d3.json("/data").then(function(data) {
-//     console.log(data);
-//     //Loop through the University array and collect the location coordinations into the var for each univerity
-    
-//     // var coordinations=[]
+  // Add legend
+  var legend = L.control({position: 'bottomright'});
+  legend.onAdd = function () {
+      var div = L.DomUtil.create('div', 'info legend'),
+          grades = [0, 5, 10, 20, 30, 40, 50, 60];
+      div.innerHTML = "<h6>Number of top <br> 800 colleges</h6>";
+      // loop through our density intervals and generate a label with a colored square for each interval
+      for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+              grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      };
+      return div;
+  };
+  legend.addTo(myMap);
 
-//     // for (var i = 0; i < data.length; i++) {
-//     //   var latitude[i] = data[i].college_lat;
-//     //   var longtitute[i] = data[i].college_lng;
-//     //   coordinations[i]=(latitude[i],longtitute[i]);
-//     //   coordinations=coordinations.append（coordinations[i]);}
-      
-    
-// //create one marker for each uiniversity, color the circle marker based on its avg SAT score and add it to the map
-//     for (var i = 0; i < data.length; i++) {
-//         var SATavg = data[i].SAT_average;
-//         L.circleMarker(coordinations,{
-//           fillOpacity:0.75,
-//           color:getColor(data.SAT_average),
-//           radius: e.mag*5,
-//           fillColor: getColor(data.SAT_average)
-//         }.addTo(myMap);
-     
-    
+});
