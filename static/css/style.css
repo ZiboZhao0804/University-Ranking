@@ -297,5 +297,15 @@ select {
 }
 
 #filter-btn{
-  padding-top: 15px;
+  margin-top: 8px;
+  background-color: rgb(207, 207, 207);
+}
+
+.t-space{
+  width: 145px;
+}
+
+.hero {
+  background-image: url("../images/nw.jpg");
+  background-size: cover;
 }
