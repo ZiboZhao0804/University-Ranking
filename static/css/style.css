@@ -25,19 +25,19 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  min-height: 100px;
-  background: #4e5d6c;
+  min-height: 35px;
+  background: ghostwhite;
 }
 
 /* The code styles the text at the bottom of the footer */
-.footer > .bottom {
+/* .footer > .bottom {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 5px;
   background: #1b3146;
-}
+} */
 
 .navbar {
   padding: 5px;
@@ -277,4 +277,25 @@ select {
   float: left;
   margin-right: 8px;
   opacity: 1;
+}
+
+/* Scale up the box */
+.box:hover {
+  transform: scale(1.2, 1.2);
+}
+
+/* Fade in the pseudo-element with the bigger shadow */
+.box:hover::after {
+  opacity: 1;
+}
+
+/*Add padding to the right of NavBar items*/
+.navbar-nav{ padding-right: 25px;}
+
+.panel-heading{
+  font-weight:500;
+}
+
+#filter-btn{
+  padding-top: 15px;
 }
