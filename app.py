@@ -14,8 +14,10 @@ else:
 
 app = Flask(__name__)
 
-# api call data, storing data
 
+##-------------api call data, storing data---------------##
+## if you have more collections inserted into the database, please add another route with a different name
+## in each route, only add the collection that you will need for the returned data
 
 @app.route('/data')
 def data():
@@ -57,8 +59,6 @@ def statesData():
     statesData = db.statesData
     statesData = json.loads(pd.DataFrame(list(statesData.find())).iloc[:,1:].to_json(orient="records"))
     return jsonify(statesData)    
-
-
 
 
 # landing page
