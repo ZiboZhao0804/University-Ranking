@@ -5,31 +5,61 @@ import pandas as pd
 import os
 import certifi
 
+# change to True when deploy to Heroku
 heroku = False
 if heroku:
     mongoKey = os.environ.get("MONGO_KEY")
 else:
     from config import mongoKey
 
-
 app = Flask(__name__)
 
-# Setup mongo connection
-conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
-client = pymongo.MongoClient(conn,tlsCAFile=certifi.where())
+# api call data, storing data
 
-# Connect to mongo db and collection
-db = client.collegeDB
-colleges = db.colleges
-states = db.states
 
-# Finds all the items in the db and sets it to a variable
-college_list = list(colleges.find())
-college_df = pd.DataFrame(college_list).iloc[:,1:]
-collegeData = college_df.to_json(orient="records")
-collegeData = json.loads(collegeData)
+@app.route('/data')
+def data():
+    # Setup mongo connection
+    conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
+    client = pymongo.MongoClient(conn,tlsCAFile=certifi.where())
+    # Connect to mongo db and collection
+    db = client.collegeDB
+    #for Unimap, datapage, scatter plot
+    colleges = db.colleges
+    # Finds all the items in the db and sets it to a variable
+    college_list = list(colleges.find())
+    college_df = pd.DataFrame(college_list).iloc[:,1:]
+    collegeData = college_df.to_json(orient="records")
+    collegeData = json.loads(collegeData)
+    return jsonify(collegeData)
 
-stateNumData = json.loads(pd.DataFrame(list(states.find())).iloc[:,1:].to_json(orient="records"))
+
+@app.route('/state')
+def state():
+    # Setup mongo connection
+    conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
+    client = pymongo.MongoClient(conn,tlsCAFile=certifi.where())
+    # Connect to mongo db and collection
+    db = client.collegeDB
+    #for pie plot
+    states = db.states
+    stateNumData = json.loads(pd.DataFrame(list(states.find())).iloc[:,1:].to_json(orient="records"))
+    return jsonify(stateNumData)
+
+@app.route('/statesData')
+def statesData():
+    # Setup mongo connection
+    conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
+    client = pymongo.MongoClient(conn,tlsCAFile=certifi.where())
+    # Connect to mongo db and collection
+    db = client.collegeDB
+    #for Unimap
+    statesData = db.statesData
+    statesData = json.loads(pd.DataFrame(list(statesData.find())).iloc[:,1:].to_json(orient="records"))
+    return jsonify(statesData)    
+
+
+
 
 # landing page
 @app.route('/')
@@ -37,16 +67,6 @@ def index():
     # render an index.html template and pass it the data you retrieved from the database
     # this is the main page
     return render_template('index.html')
-
-# api call data, not used in our final pages, just a page for storing data
-@app.route('/data')
-def data():
-    return jsonify(collegeData)
-
-
-@app.route('/state')
-def state():
-    return jsonify(stateNumData)
 
 # data page to perform searching by user
 @app.route('/datapage')
