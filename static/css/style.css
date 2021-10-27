@@ -306,6 +306,14 @@ select {
 }
 
 .hero {
-  background-image: url("../images/nw.jpg");
+  background-image: url("../images/Rankings-Niche.png");
   background-size: cover;
+}
+
+.top-button{
+  margin-left: 25px;
+}
+
+.hero-text {
+  text-decoration: white;
 }
