@@ -24,7 +24,7 @@ def mongoimport(csv_path, db_name, coll_name):
     payload = json.loads(data.to_json(orient = 'records'))
     coll.remove()
     coll.insert(payload)
-    return coll.count()
+    client.close()
 
 
 mongoimport('Data/data.csv','collegeDB','colleges')
@@ -44,6 +44,9 @@ def mongoimportjson(json_path,db_name,coll_name):
 
 mongoimportjson('Data/fullStatesData.json','collegeDB','statesData')
 
+
+#if you insert csv data file, use mongoimport function
+#if you insert json file, use mongoimportjson function defined above
 
 
 
