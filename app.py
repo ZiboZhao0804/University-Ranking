@@ -1,7 +1,9 @@
-from flask import Flask, render_template, jsonify, url_for
+from flask import Flask, render_template, jsonify
 import json
 import pymongo
 import pandas as pd
+import os
+import certifi
 
 heroku = False
 if heroku:
@@ -14,7 +16,7 @@ app = Flask(__name__)
 
 # Setup mongo connection
 conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
-client = pymongo.MongoClient(conn)
+client = pymongo.MongoClient(conn,tlsCAFile=certifi.where())
 
 # Connect to mongo db and collection
 db = client.collegeDB
