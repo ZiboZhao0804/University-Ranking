@@ -3,10 +3,17 @@ import json
 import pymongo
 import pandas as pd
 
+heroku = False
+if heroku:
+    mongoKey = os.environ.get("MONGO_KEY")
+else:
+    from config import mongoKey
+
+
 app = Flask(__name__)
 
 # Setup mongo connection
-conn = 'mongodb://localhost:27017'
+conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
 client = pymongo.MongoClient(conn)
 
 # Connect to mongo db and collection
