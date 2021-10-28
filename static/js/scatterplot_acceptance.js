@@ -8,6 +8,11 @@ function filterUniversity(school) {
   
   //  Check to make sure your are filtering your movies.
   console.log(filteredUniversity);
+ 
+  var uniname = data.map(d => d["name"]);
+  //  Check your filtered school namne
+  console.log(uniname);
+
 
   //3.1 Use the map method with the arrow function to return all the filtered school Ranking 
   var ranking = data.map(d => d["rating"]);
@@ -43,6 +48,7 @@ console.log(AvgSAT);
 var trace2 = {
   x: ranking,
   y: acceptance,
+  text: uniname,
   mode: 'markers',
   type: "scatter"
 };
@@ -60,7 +66,7 @@ var trace2 = {
   
   // 7. Define our plot layout
   var layout = {
-    title: "The Acceptance Rate, and ranking for top 50 universities in US",
+    title: "The Acceptance Rate, and ranking for top 800 universities in US",
     xaxis: { title: "Ranking " },
     yaxis: { title: "Acceptance Rate"}
   };
