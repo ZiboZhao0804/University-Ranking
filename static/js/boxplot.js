@@ -27,6 +27,12 @@ console.log("!!!!!!!")
       name: "A+",
       boxpoints: "all",
       hovertext: nameAP,
+      jitter: 0.5,
+      whiskerwidth: 0.2,
+      fillcolor: 'cls',
+      marker: {
+          size: 2
+      }
 
     };
 
@@ -37,6 +43,12 @@ console.log("!!!!!!!")
         name: "A",
         boxpoints: "all",
         hovertext: nameA,
+        jitter: 0.5,
+        whiskerwidth: 0.2,
+        fillcolor: 'cls',
+        marker: {
+            size: 2
+        }
 
       };
 
@@ -47,6 +59,12 @@ console.log("!!!!!!!")
         name: "B+",
         boxpoints: "all",
         hovertext: nameBP,
+        jitter: 0.5,
+        whiskerwidth: 0.2,
+        fillcolor: 'cls',
+        marker: {
+            size: 2
+        }
 
       };
 
@@ -57,13 +75,18 @@ console.log("!!!!!!!")
         name: "B",
         boxpoints: "all",
         hovertext: nameB,
+        jitter: 0.5,
+        whiskerwidth: 0.2,
+        fillcolor: 'cls',
+        marker: {
+            size: 2
+        }
 
       };
   
     // Create the data array for the plot
     var data = [trace1,trace2,trace3,trace4];
   
-    // Define the plot layout
     var layout = {
       title: "SAT Score vs Niche Grade",
       xaxis: { title: "Niche Grade" },
