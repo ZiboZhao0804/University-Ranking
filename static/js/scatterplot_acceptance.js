@@ -1,4 +1,4 @@
-/ function to narrow down to top 50 schools.
+// function to narrow down to top 50 schools.
 function filterUniversity(school) {
     return school.rating < 51;}
 

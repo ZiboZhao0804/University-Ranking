@@ -60,6 +60,17 @@ def statesData():
     statesData = json.loads(pd.DataFrame(list(statesData.find())).iloc[:,1:].to_json(orient="records"))
     return jsonify(statesData)    
 
+# @app.route('/niche')
+# def state():
+#     # Setup mongo connection
+#     conn = f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority"
+#     client = pymongo.MongoClient(conn,tlsCAFile=certifi.where())
+#     # Connect to mongo db and collection
+#     db = client.collegeDB
+#     #for box plot
+#     niche = db.niche
+#     nicheData = json.loads(pd.DataFrame(list(niche.find())).iloc[:,1:].to_json())
+#     return jsonify(nicheData)
 
 # landing page
 @app.route('/')

@@ -29,6 +29,7 @@ def mongoimport(csv_path, db_name, coll_name):
 
 mongoimport('Data/data.csv','collegeDB','colleges')
 mongoimport('Data/states.csv','collegeDB','states')
+# mongoimport('Data/niche.csv','collegeDB','niche')
 
 def mongoimportjson(json_path,db_name,coll_name):
     client = MongoClient(f"mongodb+srv://UniversityRankings:{mongoKey}@cluster0.02mpl.mongodb.net/collegeDB?retryWrites=true&w=majority",tlsCAFile=certifi.where())
