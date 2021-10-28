@@ -8,6 +8,11 @@ function filterUniversity(school) {
   
   //  Check to make sure your are filtering your movies.
   console.log(filteredUniversity);
+ 
+ // Use the map method with the arrow function to return all the filtered school names
+  var uniname = data.map(d => d["name"]);
+  //  Check your filtered school namne
+  console.log(uniname);
 
   //3.1 Use the map method with the arrow function to return all the filtered school Ranking 
   var ranking = data.map(d => d["rating"]);
@@ -43,6 +48,7 @@ console.log(AvgSAT);
 var trace2 = {
   x: ranking,
   y: acceptance,
+  text: uniname,
   mode: 'markers',
   type: "scatter"
 };

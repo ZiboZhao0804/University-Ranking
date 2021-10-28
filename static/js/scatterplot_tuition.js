@@ -9,6 +9,11 @@ function filterUniversity(school) {
   //  Check to make sure your are filtering your movies.
   console.log(filteredUniversity);
 
+  // Use the map method with the arrow function to return all the filtered school names
+  var uniname = data.map(d => d["name"]);
+  //  Check your filtered school namne
+  console.log(uniname);
+
   //3.1 Use the map method with the arrow function to return all the filtered school Ranking 
   var ranking = data.map(d => d["rating"]);
   //  Check your filtered school ranking.
@@ -51,6 +56,7 @@ console.log(AvgSAT);
 var trace3 = {
   x: ranking,
   y: tuition,
+  text: uniname,
   mode: 'markers',
   type: "scatter"
 };
@@ -60,7 +66,7 @@ var trace3 = {
   
   // 7. Define our plot layout
   var layout = {
-    title: "The Average SAT score, and ranking  for top 50 universities in US",
+    title: "The Average net cost($), and ranking  for top 50 universities in US",
     xaxis: { title: "Ranking " },
     yaxis: { title: "Net cost($)"}
   };
