@@ -33,7 +33,13 @@ function getColor(d) {
                     '#FFEDA0';
 }
 
-d3.json('/data').then(function(data){
+var dataPromise = d3.json('/data');
+var statesPromise = d3.json('/statesData');
+
+Promise.all([dataPromise, statesPromise]).then(function(allData){
+  var data = allData[0];
+  var statesData = allData[1];
+
   //collegeLayer with data
   var collegeData = [];
   var collegeMarkers = [];
@@ -97,7 +103,7 @@ d3.json('/data').then(function(data){
       }
     });
     // Giving each feature a pop-up with information pertinent to it
-    layer.bindPopup("<h1>" + "State: " + feature.properties.name + "</h1> <hr> <h2>" + "Number of top 800 collges in the state: " + feature.properties.collegeNumber + "</h2>");
+    layer.bindPopup("<h1>" + "State: " + feature.properties.name + "</h1> <hr> <h2>" + "Number of top 800 colleges in the state: " + feature.properties.collegeNumber + "</h2>");
   }
   var stateLayer = L.geoJson(statesData, {style: style, onEachFeature: onEachFeature});
 
