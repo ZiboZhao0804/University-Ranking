@@ -45,7 +45,7 @@ def state():
     db = client.collegeDB
     #for pie plot
     states = db.states
-    stateNumData = json.loads(pd.DataFrame(list(states.find())).iloc[:,1:].to_json(orient="records"))
+    stateNumData = json.loads(pd.DataFrame(list(states.find())).iloc[:,1:].to_json())
     return jsonify(stateNumData)
 
 @app.route('/statesData')
