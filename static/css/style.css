@@ -92,9 +92,9 @@ select {
   margin-top: 50px;
 }
 
-.navbar-brand {
+/* .navbar-brand {
   text-align: center;
-}
+} */
 
 .nav-link{
   text-align: right;
@@ -306,7 +306,7 @@ select {
 }
 
 .hero {
-  background-image: url("../images/Rankings-Niche.png");
+  background-image: url("../images/Niche2022Logo.PNG");
   background-size: cover;
 }
 
