@@ -2,12 +2,12 @@
 
 ## Inspiration and Intro to APP
 ### Welcome to the Top US Universities Attributes and Visualization Application!! We are here to help you learn more about the best US universities. Some of the questions we can help you answer include:
-• What are the best universities?
-• What universities can I consider given my SAT score?
-• Where are the best universities located?
-• Which schools are hardest to get into?
-• What is the estimated Net Cost of Attendance for a given School?
-• How many top universities are there in your state?
+- What are the best universities?
+- What universities can I consider given my SAT score?
+- Where are the best universities located?
+- Which schools are hardest to get into?
+- What is the estimated Net Cost of Attendance for a given School?
+- How many top universities are there in your state?
 
 ## Data Sources and App Development:
 <a href=https://www.niche.com ><img src="Images/NicheLogo.png" alt="niche" style="width:200px;" /></a>
