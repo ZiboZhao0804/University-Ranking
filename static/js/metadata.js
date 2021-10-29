@@ -11,7 +11,7 @@ function buildMetadata(college_name){
       demoInfo.append("div").text("Location: "+ selectedMetadata.location + '\n');
       demoInfo.append("div").text("SAT range: "+ selectedMetadata.SAT_range + '\n');
       demoInfo.append("div").text("Acceptance rate: "+ selectedMetadata['acceptance_rate (%)'] + '%' + '\n');
-      demoInfo.append("div").text("Tuition: $"+ selectedMetadata['net_price ($)'] + '\n');
+      demoInfo.append("div").text("Net Cost: $"+ selectedMetadata['net_price ($)'] + '\n');
     }); 
   }
 
