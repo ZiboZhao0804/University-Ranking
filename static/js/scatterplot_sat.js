@@ -40,9 +40,8 @@ console.log(AvgSAT);
   var trace1 = {
     x: ranking,
     y: AvgSAT,
-    text: uniname,
+    text: uniname
     mode: 'markers',
-    // marker:{color: 'DC8665'},
     type: "scatter"
   };
 
@@ -54,7 +53,7 @@ console.log(AvgSAT);
 //   type: "scatter"
 // };
 
-// // 4.3 Create  trace1 to hold the ranking vs tuition plot .
+// // // 4.3 Create  trace1 to hold the ranking vs tuition plot .
 // var trace3 = {
 // x: ranking,
 // y: tuition,
@@ -68,9 +67,9 @@ var data = [trace1];
 
 // 7. Define our plot layout
 var layout = {
-  title: "The Average SAT admitted score, and ranking  for top 800 universities in US",
+  title: "The Average SAT Score, and ranking  for top 800 universities in US",
   xaxis: { title: "Ranking " },
-  yaxis: { title: "Average SAT score"}
+  yaxis: { title: "Average SAT Score"}
 };
 
 // 8. Plot the chart to a div tag with id "scatter plot "
