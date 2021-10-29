@@ -58,6 +58,9 @@ var trace3 = {
   y: tuition,
   text: uniname,
   mode: 'markers',
+  marker: {
+    color:Array(800).fill("FFBE88")
+  },
   type: "scatter"
 };
 

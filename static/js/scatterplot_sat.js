@@ -42,6 +42,9 @@ console.log(AvgSAT);
     y: AvgSAT,
     text: uniname,
     mode: 'markers',
+    marker: {
+      color:Array(800).fill("CDB3D4")
+    },
     type: "scatter"
   };
 
