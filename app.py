@@ -6,7 +6,7 @@ import os
 import certifi
 
 # change to True when deploy to Heroku
-heroku = True
+heroku = False
 if heroku:
     mongoKey = os.environ.get("mongoKey")
 else:

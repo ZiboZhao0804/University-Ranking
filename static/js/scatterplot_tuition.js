@@ -74,6 +74,8 @@ var trace3 = {
     yaxis: { title: "Net cost($)"}
   };
   
+  var config = {responsive: true}
+  
   // 8. Plot the chart to a div tag with id "scatter plot "
-  Plotly.newPlot("scatterplot3", data,layout)
+  Plotly.newPlot("scatterplot3", data,layout,config)
 })

@@ -75,6 +75,8 @@ console.log(AvgSAT);
     yaxis: { title: "Avg SAT"}
   };
   
+  var config = {responsive: true}
+
   // 8. Plot the chart to a div tag with id "scatter plot "
-  Plotly.newPlot("scatterplot2", data,layout)
+  Plotly.newPlot("scatterplot2", data,layout,config)
 })

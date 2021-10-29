@@ -45,10 +45,11 @@ d3.json("/state").then(function(data){
     yaxis: {
         title: 'Number of colleges'
       },
-    height: 300,
-    width: 550
+    // height: 300,
+    // width: 550
   };
-  
-  Plotly.newPlot("pieplot", data, layout);
+  var config = {responsive: true}
+
+  Plotly.newPlot("pieplot", data, layout, config);
 });
 

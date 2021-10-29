@@ -73,7 +73,7 @@ var trace2 = {
     xaxis: { title: "Ranking " },
     yaxis: { title: "Acceptance Rate"}
   };
-  
+  var config = {responsive: true}
   // 8. Plot the chart to a div tag with id "scatter plot "
-  Plotly.newPlot("scatterplot1", data,layout)
+  Plotly.newPlot("scatterplot1", data,layout,config)
 })

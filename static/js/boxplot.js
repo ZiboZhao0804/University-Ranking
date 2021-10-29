@@ -90,9 +90,11 @@ console.log("!!!!!!!")
     var layout = {
       title: "SAT Score vs Niche Grade",
       xaxis: { title: "Niche Grade" },
-      yaxis: { title: "SAT Score" }
+      yaxis: { title: "SAT Score" },
     };
-  
+
+    var config = {responsive: true}
+
     // Plot the chart to a div tag with id "plot"
-    Plotly.newPlot("boxplot", data, layout);
+    Plotly.newPlot("boxplot", data, layout, config);
   });
