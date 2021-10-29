@@ -40,7 +40,7 @@ console.log(AvgSAT);
   var trace1 = {
     x: ranking,
     y: AvgSAT,
-    text: uniname
+    text: uniname,
     mode: 'markers',
     type: "scatter"
   };
