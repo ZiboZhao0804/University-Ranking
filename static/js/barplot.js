@@ -38,7 +38,9 @@ d3.json("/state").then(function(data){
   var data = [trace1];
   
   var layout = {
-    title: 'Top 15 states with the most number of top 800 colleges',
+    title:{ 
+      text:'Top 15 states with the most number of top 800 colleges',
+      font:{size: "5px"}},
     xaxis: {
         tickangle: -45
     },
@@ -49,7 +51,7 @@ d3.json("/state").then(function(data){
     // width: 550
   };
   var config = {responsive: true}
-
+  
   Plotly.newPlot("pieplot", data, layout, config);
 });
 
