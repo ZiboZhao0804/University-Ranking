@@ -10,13 +10,13 @@
 • How many top universities are there in your state?
 
 ## Data Sources and App Development:
-<a href=https://www.niche.com/><img src="Images/NicheLogo.png" alt="niche" style="width:200px;" /></a>
-[![niche](Images/NicheLogo.png =250x)](https://www.niche.com/) 
-[![Geocoding](Images/GeocodingAPI.png =250x)](https://https://developers.google.com/maps/documentation/geocoding/overview)
-[![Leaflet](Images/LeafletLogo.png =250x)](https://leafletjs.com/)
-[![mongoDB](Images/mongoDBLogo.png =250x)](https://www.mongodb.com/) 
-[![FlaskAPP](Images/FlaskappLogo.png =250x)](https://flask.palletsprojects.com/en/2.0.x/)
-[![heroku](Images/herokuLogo.png =250x)](https://id.heroku.com/login)
+<a href=https://www.niche.com ><img src="Images/NicheLogo.png" alt="niche" style="width:200px;" /></a>
+<a href=https://https://developers.google.com/maps/documentation/geocoding/overview ><img src="Images/GeocodingAPI.png" alt="Geocoding" style="width:200px;" /></a>
+<a href=https://leafletjs.com ><img src="Images/LeafletLogo.png" alt="Leaflet" style="width:200px;" /></a>
+<a href=https://www.mongodb.com/ ><img src="Images/mongoDBLogo.png" alt="mongoDB" style="width:200px;" /></a>
+<a href=https://flask.palletsprojects.com/en/2.0.x/ ><img src="Images/FlaskappLogo.png" alt="FlaskApp" style="width:200px;" /></a>
+<a href=https://id.heroku.com/login ><img src="Images/herokuLogo.png" alt="heroku" style="width:200px;" /></a>
+
 
 ## Extraction and Transformation:
 [Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
