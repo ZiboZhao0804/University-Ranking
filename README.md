@@ -10,7 +10,7 @@
 • How many top universities are there in your state?
 
 ## Data Sources and App Development:
-
+<img src="Images/NicheLogo.png" alt="niche" style="width:200px;"/>
 [![niche](Images/NicheLogo.png =250x)](https://www.niche.com/) 
 [![Geocoding](Images/GeocodingAPI.png =250x)](https://https://developers.google.com/maps/documentation/geocoding/overview)
 [![Leaflet](Images/LeafletLogo.png =250x)](https://leafletjs.com/)
