@@ -50,6 +50,9 @@ var trace2 = {
   y: acceptance,
   text: uniname,
   mode: 'markers',
+  marker: {
+    color:Array(800).fill("47CACC")
+  },
   type: "scatter"
 };
 
