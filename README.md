@@ -18,12 +18,27 @@
 <a href=https://id.heroku.com/login ><img src="Images/herokuLogo.png" alt="heroku" style="width:200px;" /></a>
 
 
-## Extraction and Transformation:
+## Extraction, Transformation and Load:
 [Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
 [Geocoding API for locations](Location_Info): We obtained the locations of the universities using Google Geocoding API.<br>
-[Final data file](Data): We stored our data using MongoDB Atlas Database.<br>
+[Final data file](Data) After data transformation, we saved our data here. <br>
+[Load data](insert_data.py): We stored our data using MongoDB Atlas Database.
 
+## Flask app and deploy:
+[Flask app](app.py): We used Flask to develop our app and the final deployment used Heroku.
 
-#### Check our univeristy ranking app website to learn more:
-https://university-ranking.herokuapp.com/
-Please leverage and explore our charts and graphs or perform your own search thru the data.
+## Check our univeristy ranking app website to learn more:
+
+[University Ranking App] (https://university-ranking.herokuapp.com/)
+
+## More about our App:
+### Main page
+- A snapshot of information in the metadata form.
+- A visualization of best universities in the United States with multiple layers.
+- A bar chart showing 15 states with the highest number of the top 800 universities.
+- A boxplot showing SAT score distribution in different Niche grade categories.
+- A panel of scatter plots showing the correlations of Averge Acceptance Rate, Average SAT, Average net cost($) versus ranking for the top 800 universities.
+### Data page
+- You may enter the university name, Niche grade, city and/or state to perform your own search.
+### About us
+- You will meet our team members and learn more about the project here.
