@@ -76,7 +76,7 @@ Promise.all([dataPromise, statesPromise]).then(function(allData){
         opacity: 1,
         color: 'white',
         dashArray: '3',
-        fillOpacity: 0.2
+        fillOpacity: 0.1
     };
   }
   function onEachFeature(feature, layer) {
