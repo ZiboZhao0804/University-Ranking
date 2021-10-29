@@ -11,12 +11,12 @@
 
 ## Data Sources and App Development:
 
-[![niche](Images/NicheLogo.png)](https://www.niche.com/) 
-[![Geocoding](Images/GeocodingAPI.png)](https://https://developers.google.com/maps/documentation/geocoding/overview)
-[![Leaflet](Images/LeafletLogo.png)](https://leafletjs.com/)
-[![mongoDB](Images/mongoDBLogo.png)](https://www.mongodb.com/) 
-[![FlaskAPP](Images/FlaskAPPLogo.png)](https://flask.palletsprojects.com/en/2.0.x/)
-[![heroku](Images/HerokuLogo.png)](https://id.heroku.com/login)
+[![niche](Images/NicheLogo.png =250x)](https://www.niche.com/) 
+[![Geocoding](Images/GeocodingAPI.png =250x)](https://https://developers.google.com/maps/documentation/geocoding/overview)
+[![Leaflet](Images/LeafletLogo.png =250x)](https://leafletjs.com/)
+[![mongoDB](Images/mongoDBLogo.png =250x)](https://www.mongodb.com/) 
+[![FlaskAPP](Images/FlaskappLogo.png =250x)](https://flask.palletsprojects.com/en/2.0.x/)
+[![heroku](Images/herokuLogo.png =250x)](https://id.heroku.com/login)
 
 ## Extraction and Transformation:
 [Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
