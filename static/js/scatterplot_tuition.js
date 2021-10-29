@@ -72,5 +72,5 @@ var trace3 = {
   };
   
   // 8. Plot the chart to a div tag with id "scatter plot "
-  Plotly.newPlot("scatterplot", data,layout)
+  Plotly.newPlot("scatterplot3", data,layout)
 })
