@@ -19,17 +19,17 @@
 
 
 ## Extraction, Transformation and Load:
-[Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
-[Geocoding API for locations](Location_Info): We obtained the locations of the universities using Google Geocoding API.<br>
-[Final data file](Data) After data transformation, we saved our data here. <br>
-[Load data](insert_data.py): We stored our data using MongoDB Atlas Database.
+- [Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
+- [Geocoding API for locations](Location_Info): We obtained the locations of the universities using Google Geocoding API.<br>
+- [Final data file](Data): After data transformation, we saved our data here. <br>
+- [Load data](insert_data.py): We stored our data using MongoDB Atlas Database.
 
 ## Flask app and deploy:
 [Flask app](app.py): We used Flask to develop our app and the final deployment used Heroku.
 
 ## Check our univeristy ranking app website to learn more:
 
-[University Ranking App] (https://university-ranking.herokuapp.com/)
+[University Ranking App](https://university-ranking.herokuapp.com/)
 
 ## More about our App:
 ### Main page
