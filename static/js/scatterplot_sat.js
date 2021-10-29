@@ -42,6 +42,7 @@ console.log(AvgSAT);
     y: AvgSAT,
     text: uniname,
     mode: 'markers',
+    marker:{color：'rgb(17, 157, 255)'}
     type: "scatter"
   };
 
