@@ -1,9 +1,29 @@
-# 2022 Best Colleges in America
+# 2022 Best Universities in the United States
 
-## Data Source:
-[![niche](Images/NicheLogo.png)](https://www.niche.com/) [![Geocoding](Images/GeocodingAPI.png)](https://https://developers.google.com/maps/documentation/geocoding/overview)
+## Inspiration and Intro to APP
+### Welcome to the Top US Universities Attributes and Visualization Application!! We are here to help you learn more about the best US universities. Some of the questions we can help you answer include:
+• What are the best universities?
+• What universities can I consider given my SAT score?
+• Where are the best universities located?
+• Which schools are hardest to get into?
+• What is the estimated Net Cost of Attendance for a given School?
+• How many top universities are there in your state?
+
+## Data Sources and App Development:
+
+[![niche](Images/NicheLogo.png)](https://www.niche.com/) 
+[![Geocoding](Images/GeocodingAPI.png)](https://https://developers.google.com/maps/documentation/geocoding/overview)
+[![Leaflet](Images/LeafletLogo.png)](https://leafletjs.com/)
+[![mongoDB](Images/mongoDBLogo.png)](https://www.mongodb.com/) 
+[![FlaskAPP](Images/FlaskAPPLogo.png)](https://flask.palletsprojects.com/en/2.0.x/)
+[![heroku](Images/HerokuLogo.png)](https://id.heroku.com/login)
 
 ## Extraction and Transformation:
-[Web Scraping](Niche_Scraping)<br>
-[Geocoding API for locations](Location_Info)<br>
-[Final data file](Data)<br>
+[Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
+[Geocoding API for locations](Location_Info): We obtained the locations of the universities using Google Geocoding API.<br>
+[Final data file](Data): We stored our data using MongoDB Atlas Database.<br>
+
+
+#### Check our univeristy ranking app website to learn more:
+https://university-ranking.herokuapp.com/
+Please leverage and explore our charts and graphs or perform your own search thru the data.
