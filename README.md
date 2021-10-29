@@ -27,10 +27,6 @@
 ## Flask app and deploy:
 [Flask app](app.py): We used Flask to develop our app and the final deployment used Heroku.
 
-## Check our univeristy ranking app website to learn more:
-
-[University Ranking App](https://university-ranking.herokuapp.com/)
-
 ## More about our App:
 ### Main page
 - A snapshot of information in the metadata form.
@@ -42,3 +38,7 @@
 - You may enter the university name, Niche grade, city and/or state to perform your own search.
 ### About us
 - You will meet our team members and learn more about the project here.
+
+## Check our univeristy ranking app website to learn more. Have fun!
+
+<strong>[University Ranking App](https://university-ranking.herokuapp.com/)</strong>
