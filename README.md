@@ -17,7 +17,7 @@
 <a href=https://flask.palletsprojects.com/en/2.0.x/ ><img src="Images/FlaskappLogo.png" alt="FlaskApp" style="width:200px;" /></a>
 <a href=https://id.heroku.com/login ><img src="Images/herokuLogo.png" alt="heroku" style="width:200px;" /></a>
 
-* According to Niche, the best colleges ranking is based on rigorous analysis of academic, admissions, financial, and student life data from the U.S. Department of Education along with millions of reviews from students and alumni. The ranking compares more than 1,000 top colleges and universities in the U.S. This year's rankings have reduced the weight of ACT/SAT scores to reflect a general de-emphasis on test scores in the college admissions process.*
+*According to Niche, the best colleges ranking is based on rigorous analysis of academic, admissions, financial, and student life data from the U.S. Department of Education along with millions of reviews from students and alumni. The ranking compares more than 1,000 top colleges and universities in the U.S. This year's rankings have reduced the weight of ACT/SAT scores to reflect a general de-emphasis on test scores in the college admissions process.*
 
 #### Methodology
 - Factors considered
