@@ -17,6 +17,19 @@
 <a href=https://flask.palletsprojects.com/en/2.0.x/ ><img src="Images/FlaskappLogo.png" alt="FlaskApp" style="width:200px;" /></a>
 <a href=https://id.heroku.com/login ><img src="Images/herokuLogo.png" alt="heroku" style="width:200px;" /></a>
 
+* According to Niche, the best colleges ranking is based on rigorous analysis of academic, admissions, financial, and student life data from the U.S. Department of Education along with millions of reviews from students and alumni. The ranking compares more than 1,000 top colleges and universities in the U.S. This year's rankings have reduced the weight of ACT/SAT scores to reflect a general de-emphasis on test scores in the college admissions process.*
+
+#### Methodology
+- Factors considered
+- Academics Grade - 40.0%
+- Value Grade - 27.5%
+- Professors Grade - 7.5%
+- Campus Grade - 5.0%
+- Diversity Grade - 5.0%
+- Student Life Grade - 5.0%
+- Student Surveys on Overalll Experience - 5.0%
+- Local Area Grade - 2.5%
+- Safety Grade - 2.5%
 
 ## Extraction, Transformation and Load:
 - [Web Scraping](Niche_Scraping): We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.<br>
