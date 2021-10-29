@@ -10,7 +10,7 @@ d3.json("/data").then(function(data){
         var SAT_range = d.SAT_range;
         var acceptance_rate = d['acceptance_rate (%)'];
         var tuition =  d['net_price ($)'];
-        var college = {'name':name,'rating':rating,'niche_grade':niche_grade,'city':city,'state':state,'SAT_range':SAT_range,'acceptance_rate':acceptance_rate,'tuition':tuition};
+        var college = {'name':name,'rating':rating,'niche_grade':niche_grade,'city':city,'state':state,'SAT_range':SAT_range,'acceptance_rate':acceptance_rate,'net_cost':tuition};
         tableData.push(college);
     });
 
