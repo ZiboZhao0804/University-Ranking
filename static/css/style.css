@@ -305,10 +305,10 @@ select {
   width: 145px;
 }
 
-/* .hero {
-  background-image: url("../images/Niche2022Logo.PNG");
-  background-size: cover;
-} */
+.hero {
+  background-image: url("../images/NicheLogo.PNG");
+  background-size: auto;
+}
 
 .top-button{
   margin-left: 25px;
