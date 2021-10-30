@@ -85,7 +85,16 @@
         <div class="row col-12">
             <div class="col-12 col-lg-5">
                 <H4 >Review of the Top US Universities</H4>
-                <p>With the increasing competitiveness and cost to attend college our team sought to review what the top ranked univserities are. 
+                <p>With the increasing competitiveness and cost to attend college our team sought to review what the 
+                  top ranked univserities and their attributes are. We filered the data in order to help an individual choose
+                  a school they may be intersted in to discover the features of that school.<br>
+                    Some of the school features you can explore are:<br>
+                    &#8226; Location<br>
+                    &#8226; SAT score<br>
+                    &#8226; Ranking<br>
+                    &#8226; Niche Grade<br>
+                    &#8226; Tuition cost<br>
+                    &#8226; Acceptance rate<br>
                     </p>
             </div>
             <div class="col-12 col-lg-7">
@@ -93,6 +102,64 @@
             </div>
         </div>
         <hr>
+      
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Methodology
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">According to Niche, the best colleges ranking is based on rigorous analysis of academic, admissions, financial, and student life data from the U.S. Department of Education 
+                along with millions of reviews from students and alumni. The ranking compares more than 1,000 top colleges and universities in the U.S. This year's rankings have reduced the weight of ACT/SAT scores 
+                to reflect a general de-emphasis on test scores in the college admissions process.<br>
+                Factors Considered:<br>
+                <ul class="col-6">
+                  <li> Academics Grade - 40.0%</li>
+                  <li> Value Grade - 27.5%</li>
+                  <li> Professors Grade</li>
+                  <li> Campus Grade</li>
+                  <li> Diversity Grade</li>
+                  <li> Student Life Grade</li>
+                  <li> Student Surveys on Overalll Experience - 5.0%</li>
+                  <li> Local Area Grade - 2.5%</li>
+                  <li> Safety Grade - 2.5%</li>
+                </ul>
+                <!-- <div class="col-6">
+                  <img src="{{url_for('static', filename ='images/NicheLogo.png')}}" alt="University" class="float-end rounded img-fluid">
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Extraction, Transformation and Load
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <ul>
+                    <li><a href="https://github.com/ZiboZhao0804/University-Ranking/tree/main/Niche_Scraping" target="_blank">Web Scraping</a>: We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.</li>
+                    <li><a href="https://github.com/ZiboZhao0804/University-Ranking/blob/main/Location_Info" target="_blank">Geocoding API for locations</a>: We obtained the locations of the universities using Google Geocoding API.</li>
+                    <li><a href="https://github.com/ZiboZhao0804/University-Ranking/blob/main/Data" target="_blank">Final data file</a>: After data transformation, we saved our data here.</li>
+                    <li><a href="https://github.com/ZiboZhao0804/University-Ranking/blob/main/insert_data.py" target="_blank">Load data</a>: We stored our data using MongoDB Atlas Database.</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Flask app and deploy
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"><a href="https://github.com/ZiboZhao0804/University-Ranking/tree/main/Niche_Scraping" target="_blank">Web Scraping</a>: We did a web scraping from Niche.com to obtain data from top 800 universities in the United States.</div>
+            </div>
+          </div>
+        </div>
         
 
 
