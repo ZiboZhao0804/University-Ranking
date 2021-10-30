@@ -1,13 +1,14 @@
 # 2022 Best Universities in the United States
 
 ## Inspiration and Intro to APP
-### Welcome to the Top US Universities Attributes and Visualization Application!! We are here to help you learn more about the best US universities. Some of the questions we can help you answer include:
-- What are the best universities?
+### Welcome to the Top US Universities Attributes and Visualization Application!! <br> In today’s world of hyper competitive, hyper selective university admissions expectations. It has become increasingly important to have the data necessary to help guide university selection and evaluation efforts. <br> Various analysis has been completed to provide select insights, and data is available for search to enable self-service investigation. Some of the questions we can help you answer include:
+- Is the ranking of universities across the US?
+- Which universities are ranked within the top x # of universities?
 - What universities can I consider given my SAT score?
-- Where are the best universities located?
+- What are expected SAT ranges for university niche grade
+- Where are the best universities located? Which are in my residential State?
 - Which schools are hardest to get into?
 - What is the estimated Net Cost of Attendance for a given School?
-- How many top universities are there in your state?
 
 ## Data Sources and App Development:
 <a href=https://www.niche.com ><img src="Images/NicheLogo.png" alt="niche" style="width:200px;" /></a>
@@ -20,7 +21,7 @@
 *According to Niche, the best colleges ranking is based on rigorous analysis of academic, admissions, financial, and student life data from the U.S. Department of Education along with millions of reviews from students and alumni. The ranking compares more than 1,000 top colleges and universities in the U.S. This year's rankings have reduced the weight of ACT/SAT scores to reflect a general de-emphasis on test scores in the college admissions process.*
 
 #### Methodology
-- Factors considered
+**Factors considered**
 - Academics Grade - 40.0%
 - Value Grade - 27.5%
 - Professors Grade - 7.5%
