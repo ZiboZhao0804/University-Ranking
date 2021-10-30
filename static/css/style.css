@@ -331,3 +331,7 @@ select {
 /* .dropdown-item {
   font-size: 10;
 } */
+
+.class {
+  text-indent: 25px;
+}
