@@ -290,7 +290,7 @@ select {
 }
 
 /*Add padding to the right of NavBar items*/
-.navbar-nav{ padding-right: 25px;}
+.navbar-nav{ margin-right: 75px;}
 
 .panel-heading{
   font-weight:500;
@@ -305,10 +305,10 @@ select {
   width: 145px;
 }
 
-.hero {
+/* .hero {
   background-image: url("../images/NicheLogo.png");
   background-size: auto;
-}
+} */
 
 .top-button{
   margin-left: 25px;
@@ -326,4 +326,8 @@ select {
 
 /* .card-body{
   height: 100%;
+} */
+
+/* .dropdown-item {
+  font-size: 10;
 } */
