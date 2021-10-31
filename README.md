@@ -56,3 +56,17 @@
 ## Check our univeristy ranking app website to learn more. Have fun!
 
 <strong>[University Ranking App](https://university-ranking.herokuapp.com/)</strong>
+
+## Challenges and Learning
+<strong>Challenge 1 - Understanding the Setup</strong><br>
+While having a deep capability in each individual technology, we lacked experience in using all of the technologies together as a cohesive application.<br>
+<strong>Challenge 2 - Assigning geo coordinates to universities</strong><br>
+In order to assign geo coordinates to universities we had to utilize Google API to search for the schools exact location. <br>
+<strong>Challenge 3 - Pivot on data source utilized</strong><br>
+The original data source that we attempted to utilize did not allow for web scraping so we had to shift our source utilizing the Niche website. <br>
+<strong>What's Next for the App?</strong><br>
+- Applying the application to alternate levels of education.
+- Expanding the geographic location of the app, global universities.
+- Adding additional parameters on which to filter schools.
+
+
