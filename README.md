@@ -1,11 +1,11 @@
 # 2022 Best Universities in the United States
 
 ## Inspiration and Intro to APP
-### Welcome to the Top US Universities Attributes and Visualization Application!! <br> In today’s world of hyper competitive, hyper selective university admissions expectations. It has become increasingly important to have the data necessary to help guide university selection and evaluation efforts. <br> Various analysis has been completed to provide select insights, and data is available for search to enable self-service investigation. Some of the questions we can help you answer include:
-- Is the ranking of universities across the US?
+### Welcome to the Top US Universities Attributes and Visualization Application!! <br> In today’s world of hyper competitive, hyper selective university admissions expectations, it has become increasingly important to have the data necessary to help guide university selection and evaluation efforts. <br> Various analyses have been completed to provide select insights, and data are available for search to enable self-service investigation. Some of the questions we can help you answer include:
+- What is the ranking of universities across the US?
 - Which universities are ranked within the top x # of universities?
 - What universities can I consider given my SAT score?
-- What are expected SAT ranges for university niche grade
+- What are expected SAT ranges for university niche grade?
 - Where are the best universities located? Which are in my residential State?
 - Which schools are hardest to get into?
 - What is the estimated Net Cost of Attendance for a given School?
