@@ -69,9 +69,9 @@ var trace2 = {
   
   // 7. Define our plot layout
   var layout = {
-    title: "The Acceptance Rate, and ranking for top 800 universities in US",
+    title: "The acceptance rate and ranking for top 800 universities in US",
     xaxis: { title: "Ranking " },
-    yaxis: { title: "Acceptance Rate"}
+    yaxis: { title: "Acceptance Rate (%)"}
   };
   var config = {responsive: true}
   // 8. Plot the chart to a div tag with id "scatter plot "

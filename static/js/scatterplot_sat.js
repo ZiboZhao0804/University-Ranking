@@ -70,9 +70,9 @@ console.log(AvgSAT);
   
   // 7. Define our plot layout
   var layout = {
-    title: "The Average SAT Score and ranking  for top 800 universities in US",
+    title: "The Average SAT Score and ranking for top 800 universities in US",
     xaxis: { title: "Ranking " },
-    yaxis: { title: "Avg SAT"}
+    yaxis: { title: "Avg SAT Score"}
   };
   
   var config = {responsive: true}
