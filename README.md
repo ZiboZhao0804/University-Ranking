@@ -49,7 +49,8 @@
 - A boxplot showing SAT score distribution in different Niche grade categories.
 - A panel of scatter plots showing the correlations of Averge Acceptance Rate, Average SAT, Average net cost($) versus ranking for the top 800 universities.
 ### Data page
-- You may enter the university name, Niche grade, city and/or state to perform your own search.
+- You may enter the university name, Niche grade, city and/or state to perform your own search.<br> 
+**We used Underscore JavaScript library _.countBy and _.keys functions to enable filterings smoothly.**
 ### About us
 - You will meet our team members and learn more about the project here.
 
