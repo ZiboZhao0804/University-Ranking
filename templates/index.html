@@ -171,10 +171,12 @@
               </div>
             </div>
             <div class="card-body">
-              
-              <div id="scatterplot1" style="height: 350px; width: 1200; outline:none"></div><br>
-              <div id="scatterplot2" style="height: 350px; width: 1200; outline:none"></div><br>
-              <div id="scatterplot3" style="height: 350px; width: 1200; outline:none"></div>
+              <select id="selScatterDataset">
+                <option value="dataset1">Acceptance rate (%)</option>
+                <option value="dataset2">Net Cost ($)</option>
+                <option value="dataset3">Average SAT Score</option>
+              </select>
+              <div id="scatterplot" style="height: 350px; width: 1200; outline:none"></div>              
             </div>
           </div>  
         </div>
@@ -205,10 +207,7 @@
 
     <script type="text/javascript" src="static/js/barplot.js"></script>
     <script type="text/javascript" src="static/js/boxplot.js"></script>
-    <script type="text/javascript" src="static/js/scatterplot_sat.js"></script>
-    <script type="text/javascript" src="static/js/scatterplot_tuition.js"></script>
-    <script type="text/javascript" src="static/js/scatterplot_acceptance.js"></script>
-
+    <script type="text/javascript" src="static/js/scatterplot.js"></script>
   </div>
 </body>
 
